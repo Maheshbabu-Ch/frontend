@@ -48,8 +48,8 @@
 }
 #tweet
 {
+    width: 80%;
     
-    margin: auto;
     background-color: #005696;
     color: white;
     padding:7px 0;
@@ -59,15 +59,17 @@
 }
 .navmid
 {
-    padding: 10px;
+    /* padding: 10px; */
     flex:0.5;
-    border: 1px solid black;
+    border: 1px solid rgb(47, 51, 54);
 }
 .navmid #head h3
 {
     font-size: 20px;
+    padding: 10px 0 40px 10px;
+    margin: none !important;
     font-weight: 700;
-    border: 1px solid black;
+    border-bottom: 2px solid rgb(47, 51, 54);
     position: sticky;
 }
 #profile_pic 
@@ -78,34 +80,73 @@
 }
 #post_user
 {
-    display:flex
+    display:flex;
+    justify-content: center;
 }
 #tweet_content
 {
-    font-size: 20px;
-    margin-left: 10px;
-    border: none;
+    color: #000000;
+    /* pointer-events: none; */
+    font-size: 30px;
+    margin-left: 20px;
+    /* border: none; */
     outline: none;
-    flex:1;
-    letter-spacing: 0.7px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: 400;
-    border-bottom: 1px solid black;
-    min-height:40px;
+    word-wrap: break-word;
     word-break: break-all;
     overflow-wrap: break-word;
+    flex:1;
+    letter-spacing: 1px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 300;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #ccc; 
 }
+#tweet_content:empty:before {
+	content: attr(data-text);
+  color: #999999;
+} 
 #postform
 {
-    padding:7px 0;
+    padding:7px 30px;
     border-bottom: 1px solid #ccc;
-    padding-bottom: 40px;
+    padding-bottom: 5px;
 }
 #postform #tweet
 {
-    margin:0;
-    margin-top: 10px;
-    width: 80px;
-    margin-left: auto !important;
+    width: 100px;
+    margin-left: auto;
+    /* margin: 30px 30px 0 auto; */
+    /* margin-left: auto !important;
+    margin-right: 30px; */
     
+}
+#postform #icons
+{
+    /* border: 1px solid black; */
+    padding:20px;
+    margin-top: 5px;
+    display: flex;;
+}
+#postform svg{
+    color:pink;
+    width:25px;
+    margin-right: 20px;
+}
+.post
+{
+    border: 1px solid pink;
+    padding: 30px;
+    display: flex;
+}
+.post #user_info
+{
+    margin-left: 20px;
+}
+#user_info p{
+    font-size: 18px;
+    font-weight: 700;
+}
+#user_info span{
+    font-weight: 400;
+    color: grey;
 }

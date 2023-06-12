@@ -26,7 +26,8 @@ export default function Login() {
   const [password, setPassword] = useState("")
   function Logcheck()
   {
-      console.log(email,password)
+      alert(email)
+      alert(password)
       // useNavigate('/home')
 
   }
