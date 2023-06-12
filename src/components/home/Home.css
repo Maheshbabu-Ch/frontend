@@ -1,0 +1,111 @@
+.homep
+{
+    display: flex;
+    flex-direction: row;
+}
+.nav1
+{
+    /* width:25%; */
+    flex:0.25;
+    height: 100vh;
+    border-left: 1px solid #6b7175;
+}
+.Navleft 
+{
+    padding-left: 40px !important;
+}
+.Navleft #logo img
+{
+    padding: 20px 0 ;
+    width: 0.75 rem !important;
+}
+.Navleft #links svg 
+{
+    width:1.75rem;
+    margin: 5px;
+    margin-right: 20px;
+}
+.Navleft #links #one
+{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    /* border: 1px solid black; */
+    font-weight: 700;
+    font-size: 19px;
+    margin-bottom: 15px;
+    padding-right:10px;
+    width: fit-content;
+}
+#one:hover
+{
+    border-radius: 50px;
+    background-color: #ccc;
+}
+#one.active
+{
+    color:#005696
+}
+#tweet
+{
+    
+    margin: auto;
+    background-color: #005696;
+    color: white;
+    padding:7px 0;
+    text-align: center;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.navmid
+{
+    padding: 10px;
+    flex:0.5;
+    border: 1px solid black;
+}
+.navmid #head h3
+{
+    font-size: 20px;
+    font-weight: 700;
+    border: 1px solid black;
+    position: sticky;
+}
+#profile_pic 
+{
+    height:45px;
+    width: 45px;
+    border-radius: 50% !important;
+}
+#post_user
+{
+    display:flex
+}
+#tweet_content
+{
+    font-size: 20px;
+    margin-left: 10px;
+    border: none;
+    outline: none;
+    flex:1;
+    letter-spacing: 0.7px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 400;
+    border-bottom: 1px solid black;
+    min-height:40px;
+    word-break: break-all;
+    overflow-wrap: break-word;
+}
+#postform
+{
+    padding:7px 0;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 40px;
+}
+#postform #tweet
+{
+    margin:0;
+    margin-top: 10px;
+    width: 80px;
+    margin-left: auto !important;
+    
+}
