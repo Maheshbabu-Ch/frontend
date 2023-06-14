@@ -24,7 +24,7 @@
 import React from 'react'
 // import Demo from './Demo'
 import {BrowserRouter,Routes,Route,Navigate} from 'react-router-dom'
-import Home from './components/home/Home'
+import Main from './components/home/Main'
 import Contact from './components/Contact'
 import About from './components/About'
 import Login from './components/Login'
@@ -49,8 +49,8 @@ class App extends React.Component
         <BrowserRouter>
         {/* <Navigation/> */}
           <Routes>
-            <Route path="/" element= {this.state.isloggedIn ? <><Navigate to = "/login" replace/> {this.setState({isloggedIn:false})} </>: <Home/>} />
-            <Route path="/home" element = {<Home/>} />
+            <Route path="/" element= {this.state.isloggedIn ? <><Navigate to = "/login" replace/> {this.setState({isloggedIn:false})} </>: <Main/>} />
+            <Route path="/home" element = {<Main/>} />
             <Route path="/about" element= {<About/>}/>
             <Route path="/contact" element= {<Contact/>}/>
             <Route path="/login" element= {<Login/>}/>

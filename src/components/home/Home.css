@@ -3,12 +3,15 @@
     display: flex;
     flex-direction: row;
 }
+a{
+    text-decoration: none !important;
+}
 .nav1
 {
     /* width:25%; */
     flex:0.25;
     height: 100vh;
-    border-left: 1px solid #6b7175;
+    border-right: 1px solid #ccc;
 }
 .Navleft 
 {
@@ -61,7 +64,7 @@
 {
     /* padding: 10px; */
     flex:0.5;
-    border: 1px solid rgb(47, 51, 54);
+    border-right: 1px solid #ccc;;
 }
 .navmid #head h3
 {
@@ -69,7 +72,8 @@
     padding: 10px 0 40px 10px;
     margin: none !important;
     font-weight: 700;
-    border-bottom: 2px solid rgb(47, 51, 54);
+    border-bottom: 2px solid #ccc;
+    /* rgb(47, 51, 54); */
     position: sticky;
 }
 #profile_pic 
@@ -134,19 +138,36 @@
 }
 .post
 {
-    border: 1px solid pink;
+    border: 1px solid #ccc;
     padding: 30px;
     display: flex;
 }
-.post #user_info
-{
-    margin-left: 20px;
-}
 #user_info p{
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 700;
 }
 #user_info span{
     font-weight: 400;
     color: grey;
 }
+#cont
+{
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid black; */
+    margin-left: 20px;
+}
+#con 
+{
+    font-size: 20px;
+    font-weight: 600;
+}
+#post_actions svg 
+{
+    width:1.75rem;
+    margin: 5px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+#comment:hover{ fill:blue; }
+#like:hover { fill:red;}
