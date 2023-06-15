@@ -1,8 +1,9 @@
 import React from 'react'
 
-export default function Navmid( {info}) {
-  console.log("info is ")
-  console.log(info)
+export default function Navmid( ){
+  // {info}) {
+  // const curr = info.currentUser
+  // console.log(curr.name)
   const currentuser = "Ram"
   const tweet_text = "";
   // function post_tweet()
@@ -16,13 +17,14 @@ export default function Navmid( {info}) {
   // }
 
   function post_tweet() {
+
     const tweetText = document.getElementById("tweet_content").innerText;
   
     const newPost = document.createElement("div");
     newPost.className = "post";
     newPost.innerHTML = `<img id="profile_pic"src="https://pbs.twimg.com/profile_images/1564799567434252288/y-JUJVQf_normal.jpg"></img>
     <div id="cont">
-      <div id="user_info"><p>Ram <span>@ram123</span></p></div>
+      <div id="user_info"><p>{curr.name}<span>@{curr.username}</span></p></div>
       <p id="con">hello this is a sample tweet dont mind me ok thank you and how are you whats goin gon lately</p>
       <div id='post_actions'>
         <svg id="comment" viewBox="0 0 24 24" aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-1xvli5t r-dnmrzs r-bnwqim r-1plcrui r-lrvibr r-1hdv0qi"><g><path d="M1.751 10c0-4.42 3.584-8 8.005-8h4.366c4.49 0 8.129 3.64 8.129 8.13 0 2.96-1.607 5.68-4.196 7.11l-8.054 4.46v-3.69h-.067c-4.49.1-8.183-3.51-8.183-8.01zm8.005-6c-3.317 0-6.005 2.69-6.005 6 0 3.37 2.77 6.08 6.138 6.01l.351-.01h1.761v2.3l5.087-2.81c1.951-1.08 3.163-3.13 3.163-5.36 0-3.39-2.744-6.13-6.129-6.13H9.756z"></path></g></svg>

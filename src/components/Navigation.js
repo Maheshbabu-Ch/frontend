@@ -33,6 +33,7 @@ export default function Navigation() {
         <div>
         <Link to="/login">Login</Link>
         <Link to="/signup">Signup</Link>
+        <Link to="/about">About</Link>
         </div>
     </div>
   )

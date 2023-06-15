@@ -40,9 +40,11 @@ router.post("/login", async (req, res) => {
                         id: userexist.id
                     }
                 }
+                const {password , ...info} = userexist._doc;
                 jwt.sign(payload, 'newsecreate', { expiresIn: 360000000 }, (err, token) => {
                     if (err) throw err;
-                    return res.status(200).json({ token: token, name: userexist.name, username: userexist.username});
+                    // return res.status(200).json({ token: token, name: userexist.name, id: userexist.id});
+                    return res.status(200).json({ token: token, info });
                 });
             }
             else {

@@ -9,13 +9,14 @@ a{
 .nav1
 {
     /* width:25%; */
+    /* width: 30%; */
     flex:0.25;
     height: 100vh;
     border-right: 1px solid #ccc;
 }
 .Navleft 
 {
-    padding-left: 40px !important;
+    padding-left: 20% !important;
 }
 .Navleft #logo img
 {
@@ -63,8 +64,15 @@ a{
 .navmid
 {
     /* padding: 10px; */
+    /* width:60%; */
     flex:0.5;
-    border-right: 1px solid #ccc;;
+    border-right: 1px solid #ccc;
+    height: 100vh !important;
+    overflow-y: scroll;
+}
+.navmid::-webkit-scrollbar {
+    width: 0;
+    height: 0;
 }
 .navmid #head h3
 {
@@ -74,7 +82,16 @@ a{
     font-weight: 700;
     border-bottom: 2px solid #ccc;
     /* rgb(47, 51, 54); */
-    position: sticky;
+    /* position: fixed; */
+}
+.navmid #head 
+{
+    position:sticky;
+    top:0;
+    z-index: 10;
+    background-color: rgba(255, 255, 255,0.5); /* Replace with your desired background color */
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(8px); /* For Safari */
 }
 #profile_pic 
 {
@@ -91,7 +108,7 @@ a{
 {
     color: #000000;
     /* pointer-events: none; */
-    font-size: 30px;
+    font-size: 25px;
     margin-left: 20px;
     /* border: none; */
     outline: none;
@@ -148,6 +165,7 @@ a{
 }
 #user_info span{
     font-weight: 400;
+    margin-left: 5px;
     color: grey;
 }
 #cont
@@ -171,3 +189,33 @@ a{
 }
 #comment:hover{ fill:blue; }
 #like:hover { fill:red;}
+#navright
+{
+    flex:0.25;
+}
+#search
+{
+  box-shadow: 1px 1px 3px black;
+  width: 80%;
+  padding: 1%;
+  display: flex;
+  justify-content: center;
+  border-radius: 25px;
+  margin: auto;
+  margin-top: 10%;
+}
+#search input {
+  width:85%;
+  padding:1%;
+  border: none;
+  outline: none;
+}
+#search input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+  display: none;
+}
+#search #i 
+{
+  margin: 2%;
+}

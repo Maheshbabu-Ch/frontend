@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const auth = require('./routes/auth');
+const tweets = require('./routes/tweets');
 const user = require('./routes/user');
 const { User }  = require('./model/Schema');
 
@@ -24,8 +25,10 @@ mongoose.connect('mongodb+srv://mahesh:mahesh12@cluster0.9g80yjd.mongodb.net/fir
 app.use('/api/auth', auth);
 //users api's
 app.use('/api/user', user);
+//tweets api's
+app.use('/api/tweets', tweets);
 
-app.get("/retrieve",(req,res)=>{ User.find() 
-    .then(found => res.json(found) )})
+// app.get("/retrieve",(req,res)=>{ User.find() 
+//     .then(found => res.json(found) )})
 //run server
 app.listen(5000, () => console.log('server is running'));

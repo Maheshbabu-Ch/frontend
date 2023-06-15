@@ -26,10 +26,42 @@ export default function Login() {
   const changeHandler = (e) => {
     setlogin({ ...login, [e.target.name]: e.target.value });
 }
+// const submitHandler = (e) => {
+//     e.preventDefault();
+//     // axios.post('http://localhost:5000/api/auth/login', login).then(res => { localStorage.setItem('token', res.data.token); const a= res.data; navigate('/home',{state: { a }}) }).catch(err => alert(err.response.data));
+//     axios.post('http://localhost:5000/api/auth/login', login)
+//     .then(res => { 
+//       localStorage.setItem('token', res.data.token); 
+//       axios.get('http://localhost:5000/api/user/')
+//       .then(response => { const curruser = response.data.find(user => user.email === response.data.email);
+//       navigate('/home',{state: { curruser }});
+//      })
+//      .catch(error => {
+//       console.log(error);
+//     });
+// })
+// .catch(err => alert(err.response.data));
+// };
+
 const submitHandler = (e) => {
-    e.preventDefault();
-    axios.post('http://localhost:5000/api/auth/login', login).then(res => { localStorage.setItem('token', res.data.token); const a= res.data; navigate('/home',{state: { a }}) }).catch(err => alert(err.response.data));
-}
+  e.preventDefault();
+  axios.post('http://localhost:5000/api/auth/login', login)
+    .then(res => {
+      console.log(res);
+      localStorage.setItem('token', res.data.token);
+      
+      axios.get('http://localhost:5000/api/user')
+        .then(response => {
+          const currentUser = response.data.find(user => user.name === res.data.name); // Find the user with matching name
+          navigate('/home', { state: { currentUser } }); // Pass the currentUser to the homepage
+        })
+        .catch(error => {
+          console.log(error);
+        });
+    })
+    .catch(err => alert(err.response.data));
+};
+
   return (
     <div>
         <Nav/>
@@ -39,7 +71,7 @@ const submitHandler = (e) => {
         <table>
           <tr>
             <td>Email</td>
-            <td><input name="email" type='text' placeholder='Enter your Email' onChange={changeHandler} required/></td>
+            <td><input name="email" type='text' placeholder='Enter your Email' onChange={changeHandler} required autoComplete='off'/></td>
           </tr>
           <tr>
             <td>Password</td>

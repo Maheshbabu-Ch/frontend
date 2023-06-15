@@ -52,16 +52,19 @@
 import React from 'react'
 import Navleft from './Navleft'
 import Navmid from './Navmid'
+import Navright from './Navright'
 import { useLocation } from 'react-router-dom'
 
 export default function Main() {
-  const loc =useLocation()
-  const temp = loc.state;
-  console.log(temp)
+  // const loc =useLocation()
+  // const temp = loc.state;
+  // console.log(temp)
   return (
     <div className='homep'>
       <Navleft/>
-      <Navmid info={temp}/>
+      {/* <Navmid info={temp}/> */}
+      <Navmid />
+      <Navright/>
     </div>
   )
 }
