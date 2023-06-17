@@ -1,0 +1,278 @@
+.homep
+{
+    display: flex;
+    flex-direction: row;
+}
+a{
+    text-decoration: none !important;
+    color:black ;
+}
+.nav1
+{
+    /* width:25%; */
+    /* width: 30%; */
+    flex:0.25;
+    height: 100vh;
+    border-right: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.Navleft 
+{
+    padding-left: 20% !important;
+}
+.Navleft #logo img
+{
+    padding: 20px 0 ;
+    width: 0.75 rem !important;
+}
+.Navleft #links svg 
+{
+    width:1.75rem;
+    margin: 5px;
+    margin-right: 20px;
+}
+.Navleft #links #one
+{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    /* border: 1px solid black; */
+    font-weight: 700;
+    font-size: 19px;
+    margin-bottom: 15px;
+    padding-right:10px;
+    width: fit-content;
+}
+#one:hover
+{
+    border-radius: 50px;
+    background-color: #ccc;
+}
+#one.active
+{
+    color:#005696
+}
+#tweet
+{
+    width: 80%;
+    
+    background-color: #005696;
+    color: white;
+    padding:7px 0;
+    text-align: center;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.navmid
+{
+    /* padding: 10px; */
+    /* width:60%; */
+    flex:0.5;
+    border-right: 1px solid #ccc;
+    height: 100vh !important;
+    overflow-y: scroll;
+}
+.navmid::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+.navmid #head h3
+{
+    font-size: 20px;
+    padding: 10px 0 40px 10px;
+    margin: none !important;
+    font-weight: 700;
+    border-bottom: 2px solid #ccc;
+    /* rgb(47, 51, 54); */
+    /* position: fixed; */
+}
+.navmid #head 
+{
+    position:sticky;
+    top:0;
+    z-index: 10;
+    background-color: rgba(255, 255, 255,0.5); /* Replace with your desired background color */
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(8px); /* For Safari */
+}
+#profile_pic 
+{
+    height:45px;
+    width: 45px;
+    border-radius: 50% !important;
+}
+#post_user
+{
+    display:flex;
+    justify-content: center;
+}
+#tweet_content
+{
+    color: #000000;
+    /* pointer-events: none; */
+    font-size: 25px;
+    margin-left: 20px;
+    /* border: none; */
+    outline: none;
+    word-wrap: break-word;
+    word-break: break-all;
+    overflow-wrap: break-word;
+    flex:1;
+    letter-spacing: 1px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 300;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #ccc; 
+}
+#tweet_content:empty:before {
+	content: attr(data-text);
+  color: #999999;
+} 
+#postform
+{
+    padding:7px 30px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+#postform #tweet
+{
+    width: 100px;
+    margin-left: auto;
+    /* margin: 30px 30px 0 auto; */
+    /* margin-left: auto !important;
+    margin-right: 30px; */
+    
+}
+#postform #icons
+{
+    /* border: 1px solid black; */
+    padding:20px;
+    margin-top: 5px;
+    display: flex;;
+}
+#postform svg{
+    color:pink;
+    width:25px;
+    margin-right: 20px;
+}
+.post
+{
+    border: 1px solid #ccc;
+    padding: 30px;
+    display: flex;
+}
+#user_info p{
+    font-size: 20px;
+    font-weight: 700;
+}
+#user_info span{
+    font-weight: 400;
+    margin-left: 5px;
+    color: grey;
+}
+#cont
+{
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid black; */
+    margin-left: 20px;
+}
+#con 
+{
+    font-size: 20px;
+    font-weight: 600;
+}
+#post_actions svg 
+{
+    width:1.75rem;
+    margin: 5px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+#comment:hover{ fill:blue; }
+#like:hover { fill:red;}
+#navright
+{
+    flex:0.25;
+}
+#search
+{
+  box-shadow: 1px 1px 3px black;
+  width: 70%;
+  padding: 1%;
+  display: flex;
+  justify-content: center;
+  border-radius: 25px;
+  margin: auto;
+  margin-top: 10%;
+}
+#search input {
+  width:85%;
+  border-radius: 25px;
+  padding:1%;
+  border: none;
+  outline: none;
+}
+#search input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+  display: none;
+}
+#search #i 
+{
+  margin: 2%;
+}
+#tagbox
+{
+    border: 1px solid black;
+    background-color: #e5e0e087;
+    border-radius: 25px;
+    width: 65%;
+    max-width: 70%;
+    margin:auto;
+    margin-top:40px;
+    padding-left: 5%;
+}
+.navmid.profile #head
+{
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    border: 1px solid black;
+}
+#back
+{
+    width:30px;
+    margin-right:30px;
+    cursor: pointer;
+}
+#userbox
+{
+    margin:20px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;;
+    /* border: 1px solid black; */
+    padding: 10px 10px 10px 20px ;
+}
+#logout
+{
+    background-color: blue;
+    color: white;
+    padding: 15px;
+    border-radius: 25px;
+}
+#userbox p{
+    line-height: 5px;
+}
+#logprof
+{
+    display: flex;
+    align-items: center;
+}
+#logprof img
+{
+    margin-right: 10px;
+}
